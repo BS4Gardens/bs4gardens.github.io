@@ -1,0 +1,9 @@
+<dl class="gegevens">
+{%- if page.gemeente %}
+<dt>Plaats</dt><dd>{{ page.gemeente }}</dd>
+{%- endif %}
+<dt>Dienst</dt><dd>{{ page.dienst }}</dd>
+{%- if page.datum %}
+<dt>Periode</dt><dd>{{ page.datum }}</dd>
+{%- endif %}
+</dl>

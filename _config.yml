@@ -1,0 +1,53 @@
+# Instellingen van de site. Alleen wat GitHub Pages standaard kent.
+title: BS4Gardens
+description: BS4Gardens is een tuinonderneming uit Deinze voor tuinonderhoud, tuinaanleg, opritten en terrassen.
+lang: nl
+markdown: kramdown
+
+# Basisadres: ENIG PLEK om aan te passen bij de domeinkoppeling
+# (nu https://bs4gardens.github.io, later het adres met www en .be). Geen slash op het einde.
+url: "https://bs4gardens.github.io"
+baseurl: ""
+
+# Testfase: op elke pagina <meta name="robots" content="noindex, nofollow">.
+# Bij de domeinkoppeling op false zetten (of de regel weghalen).
+noindex: true
+
+# TESTVERSIE: true = geen gele [?]-vakjes of "Foto volgt" voor de bezoeker, ontbrekende
+# gegevens blijven onzichtbaar, onbevestigde passages zijn verborgen, werkgebied enkel
+# "Deinze en omgeving", voet met "Testversie, binnenkort meer". Voor echte publicatie op false
+# (python3 -I controle.py --publicatie faalt zolang dit true is).
+test: true
+
+# Over-pagina: B = derde persoon (Bavo heeft...), A = ik-vorm (Ik ben Bavo...). Bavo kiest.
+over_variant: B
+
+# Verhoog dit bij elke wijziging aan CSS, scripts of afbeeldingen (cache-busting ?v=)
+asset_versie: "20261104-1"
+
+# Cookiebanner tonen. GA4 blijft uit zolang ga4_id een [?] is.
+cookiebanner: true
+ga4_id: "[?]"
+
+# Intern: de teksten van privacy en cookies zijn nog niet juridisch nagelezen (zie README)
+
+collections:
+  projecten:
+    output: true
+    permalink: /projecten/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "projecten"
+    values:
+      layout: default
+
+# Bestanden die niet op de site mogen verschijnen
+exclude:
+  - README.md
+  - controle.py
+  - maak_logo.py
+  - maak_fotos.py
+  - codeer_contact.py
+  - sjablonen

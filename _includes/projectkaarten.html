@@ -1,0 +1,8 @@
+<ul class="kaarten">
+{%- for p in site.projecten %}
+{%- assign kf = p.fotos | where: "kaart", true | first %}
+<li class="kaart">
+{%- if kf %}<a href="{{ p.url | relative_url }}" tabindex="-1" aria-hidden="true"><img class="kaart-foto" src="{{ kf.bestand | prepend: '/assets/foto/' | relative_url }}?v={{ site.asset_versie }}" alt="" width="{{ kf.breedte }}" height="{{ kf.hoogte }}" loading="lazy"></a>{% endif -%}
+<h3><a href="{{ p.url | relative_url }}">{{ p.titel }}</a></h3><p>{% if p.gemeente %}{{ p.gemeente }}, {% endif %}{{ p.dienst }}</p><a class="kaartlink" href="{{ p.url | relative_url }}">Bekijk dit project</a></li>
+{%- endfor %}
+</ul>

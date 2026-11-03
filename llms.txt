@@ -1,0 +1,16 @@
+---
+layout: null
+permalink: /llms.txt
+---
+# BS4Gardens
+
+> BS4Gardens is een tuinonderneming uit Deinze ({{ site.data.contact.bedrijf }}, {{ site.data.contact.ondernemingsnummer }}). Diensten: tuinonderhoud, tuinaanleg, opritten en terrassen in Deinze en omgeving.
+
+## Diensten
+{% for d in site.data.diensten -%}
+- [{{ d.titel }}]({{ d.url | absolute_url }}): {{ d.llms }}
+{% endfor %}
+## Over en contact
+- [Over BS4Gardens]({{ '/over/' | absolute_url }})
+- [Contact]({{ '/contact/' | absolute_url }}): offerte aanvragen
+- [Projecten]({{ '/projecten/' | absolute_url }})

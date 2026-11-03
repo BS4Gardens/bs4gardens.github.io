@@ -1,0 +1,5 @@
+<div class="fotos">
+{%- for f in page.fotos %}
+{% include foto.html bestand=f.bestand alt=f.alt breedte=f.breedte hoogte=f.hoogte %}
+{%- endfor %}
+</div>

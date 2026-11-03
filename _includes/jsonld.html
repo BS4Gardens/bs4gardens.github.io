@@ -1,0 +1,35 @@
+{%- comment -%}Telefoon en e-mail staan bewust niet in de JSON-LD.{%- endcomment -%}
+{%- assign i = site.data.contact.instagram -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LandscapingBusiness",
+  "@id": "{{ '/#bedrijf' | absolute_url }}",
+  "name": "BS4Gardens",
+  "legalName": "{{ site.data.contact.bedrijf }}",
+  "url": "{{ '/' | absolute_url }}",
+  "logo": "{{ '/assets/logo.png' | absolute_url }}",
+  "description": "Tuinonderhoud, tuinaanleg, opritten en terrassen in Deinze en omgeving.",
+  "address": {
+    "@type": "PostalAddress",
+    "postalCode": "{{ site.data.contact.postcode }}",
+    "addressLocality": "{{ site.data.contact.plaats }}",
+    "addressCountry": "BE"
+  },
+  {%- if site.data.werkgebied.bevestigd %}
+  "areaServed": [
+    {%- for g in site.data.werkgebied.gemeenten %}
+    {"@type": "City", "name": "{{ g }}"}{% unless forloop.last %},{% endunless %}
+    {%- endfor %}
+  ],
+  {%- endif %}
+  {%- unless i contains "[?" %}
+  "sameAs": ["{{ i }}"],
+  {%- endunless %}
+  "makesOffer": [
+    {%- for d in site.data.diensten %}
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "{{ d.titel }}"}}{% unless forloop.last %},{% endunless %}
+    {%- endfor %}
+  ]
+}
+</script>

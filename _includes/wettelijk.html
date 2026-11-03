@@ -1,0 +1,7 @@
+{%- assign c = site.data.contact -%}
+{{ c.bedrijf }}<br>
+Zetel: {{ c.zetel }}, {{ c.postcode }} {{ c.plaats }}<br>
+Ondernemingsnummer {{ c.ondernemingsnummer }}
+{%- if c.rpr != "" and c.rpr != nil -%}, RPR {{ c.rpr }}{%- endif -%}
+<br>
+Btw {{ c.btw }}

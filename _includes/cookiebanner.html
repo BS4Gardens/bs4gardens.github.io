@@ -1,0 +1,14 @@
+<div id="cookiebanner" class="cookiebanner" role="dialog" aria-labelledby="cookie-titel" hidden>
+  <h2 id="cookie-titel">Cookies</h2>
+  <p>BS4Gardens BV gebruikt alleen een noodzakelijke opslag die je keuze onthoudt. Met jouw toestemming meten we ook met Google Analytics hoe de website gebruikt wordt. Weiger je, dan werkt de website gewoon en wordt er niets gemeten. Je kan je keuze altijd wijzigen of intrekken via "Cookie-instellingen" onderaan elke pagina. <a href="{{ '/cookies/' | relative_url }}">Lees meer over cookies</a></p>
+  <div class="cookie-acties">
+    <button type="button" class="knop" data-cookie="alles">Alles accepteren</button>
+    <button type="button" class="knop" data-cookie="nodig">Alles weigeren</button>
+    <button type="button" class="linkknop" data-cookie="instellingen" aria-expanded="false" aria-controls="cookie-instellingen">Instellingen</button>
+  </div>
+  <div id="cookie-instellingen" class="cookie-instellingen" hidden>
+    <label><input type="checkbox" checked disabled> Noodzakelijk (altijd aan): onthoudt je keuze, 6 maanden</label>
+    <label><input type="checkbox" id="cookie-stat"> Statistieken (Google Analytics, Google): hoe de website gebruikt wordt, cookies 13 maanden</label>
+    <button type="button" class="knop" data-cookie="opslaan">Keuze opslaan</button>
+  </div>
+</div>

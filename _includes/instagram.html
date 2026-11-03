@@ -1,0 +1,6 @@
+{%- assign i = site.data.contact.instagram -%}
+{%- if i contains "[?" -%}
+{%- unless site.test -%}<span class="open">Instagram [?]</span>{%- endunless -%}
+{%- else -%}
+<a href="{{ i }}" target="_blank" rel="noopener noreferrer" data-event="click_instagram">Instagram</a>
+{%- endif -%}

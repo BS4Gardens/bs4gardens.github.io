@@ -1,0 +1,5 @@
+<ul class="kaarten">
+{%- for d in site.data.diensten %}
+<li class="kaart"><h3><a href="{{ d.url | relative_url }}">{{ d.titel }}</a></h3><p>{{ d.kaart }}</p><a class="kaartlink" href="{{ d.url | relative_url }}">Meer over {{ d.titel | downcase }}</a></li>
+{%- endfor %}
+</ul>

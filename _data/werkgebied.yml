@@ -1,0 +1,17 @@
+# Werkgebied (sectie op home en contact, geen pagina per gemeente).
+# Lijst nog niet gesloten: Bavo bevestigt. Zet bevestigd op true zodra dat gebeurd is.
+bevestigd: false
+gemeenten:
+  - Deinze
+  - Astene
+  - Nevele
+  - Aalter
+  - Sint-Martens-Latem
+  - Zulte
+  - Gent
+  - Kruisem
+  - Oudenaarde
+  - Eename
+  - Gavere
+  - Nazareth
+  - De Pinte

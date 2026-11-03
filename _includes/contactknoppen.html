@@ -1,0 +1,18 @@
+{%- assign c = site.data.contact -%}
+{%- assign aantal = c.telefoon_c.size | plus: c.mail_c.size -%}
+{%- if aantal == 0 and site.test -%}
+<p class="contact-volgt">Contactgegevens volgen binnenkort</p>
+{%- else -%}
+<div class="knoppen">
+{%- if c.telefoon_c.size > 0 %}
+<button type="button" class="knop" data-contact="tel" data-event="click_telefoon" aria-label="Toon het telefoonnummer van BS4Gardens" hidden>Toon telefoonnummer</button>
+{%- endif %}
+{%- if c.whatsapp == true and c.telefoon_c.size > 0 %}
+<button type="button" class="knop knop-licht" data-contact="wa" data-event="click_whatsapp" aria-label="Stuur een WhatsApp-bericht aan BS4Gardens, opent in een nieuw tabblad" hidden>Stuur een WhatsApp-bericht</button>
+{%- endif %}
+{%- if c.mail_c.size > 0 %}
+<button type="button" class="knop knop-licht" data-contact="mail" data-event="click_mail" aria-label="Toon het e-mailadres van BS4Gardens" hidden>Toon e-mailadres</button>
+{%- endif %}
+</div>
+<noscript><p class="contact-nojs">Schakel JavaScript in om de contactgegevens te zien.{% unless c.instagram contains "[?" %} Of stuur ons een bericht via {% include instagram.html %}.{% endunless %}</p></noscript>
+{%- endif -%}

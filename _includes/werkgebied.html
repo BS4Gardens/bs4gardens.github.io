@@ -1,0 +1,14 @@
+{%- comment -%}Testversie zonder bevestigde lijst: niets tonen, de zin op de pagina zegt al "Deinze en omgeving".{%- endcomment -%}
+{%- if site.test and site.data.werkgebied.bevestigd != true -%}
+{%- else -%}
+<ul class="gemeenten">
+{%- for g in site.data.werkgebied.gemeenten %}
+<li>{{ g }}</li>
+{%- endfor %}
+</ul>
+{%- unless site.test -%}
+{%- unless site.data.werkgebied.bevestigd %}
+<p class="open-regel"><span class="open">Werkgebied [?]</span> Bavo bevestigt de lijst.</p>
+{%- endunless -%}
+{%- endunless -%}
+{%- endif -%}

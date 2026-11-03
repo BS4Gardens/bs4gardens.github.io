@@ -1,0 +1,21 @@
+# De vier diensten. Gebruikt voor de kaarten, de verwijzingen tussen dienstpagina's en llms.txt.
+- sleutel: tuinonderhoud
+  titel: Tuinonderhoud
+  url: /diensten/tuinonderhoud/
+  kaart: Gazon, haag en borders, zodat je tuin er blijft uitzien
+  llms: regelmatig onderhoud van gazon, borders en haag
+- sleutel: tuinaanleg
+  titel: Tuinaanleg
+  url: /diensten/tuinaanleg/
+  kaart: Een tuin aanleggen die lang meegaat
+  llms: nieuwe tuinen aanleggen
+- sleutel: opritten
+  titel: Opritten
+  url: /diensten/opritten/
+  kaart: Een stevige oprit met een goede onderfundering
+  llms: opritten aanleggen
+- sleutel: terrassen
+  titel: Terrassen
+  url: /diensten/terrassen/
+  kaart: Een terras om buiten te leven
+  llms: terrassen aanleggen

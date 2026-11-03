@@ -1,0 +1,32 @@
+{%- comment -%}
+Fotoband op de home: de foto's met band: true uit alle projecten in _projecten/ (een extra project komt vanzelf in de band).
+Weergavehoogte 380 px, breedte volgt de verhouding; de bestanden zijn nooit groter dan 2x die maat en worden nooit breder getoond dan ze zijn.
+Zonder JavaScript is het een scrollbare rij; de knoppen (hidden) worden door assets/band.js getoond.
+{%- endcomment -%}
+{%- assign totaal = 0 -%}
+{%- for p in site.projecten -%}
+{%- assign bf = p.fotos | where: "band", true -%}
+{%- assign totaal = totaal | plus: bf.size -%}
+{%- endfor -%}
+{%- if totaal > 0 -%}
+{%- assign n = 0 %}
+<section class="fotoband" aria-roledescription="carrousel" aria-label="Foto's van onze projecten" data-aantal="{{ totaal }}">
+{%- if totaal > 1 %}
+  <div class="band-knoppen">
+    <button type="button" class="band-knop" data-band="vorige" aria-label="Vorige foto" hidden><span aria-hidden="true">&lsaquo;</span></button>
+    <button type="button" class="band-knop band-pauze" data-band="pauze" aria-pressed="false" aria-label="Pauzeer het automatisch doorschuiven" hidden>Pauzeer</button>
+    <button type="button" class="band-knop" data-band="volgende" aria-label="Volgende foto" hidden><span aria-hidden="true">&rsaquo;</span></button>
+  </div>
+{%- endif %}
+  <ul class="band-rij" tabindex="0" aria-label="Foto's van projecten, veeg of gebruik de pijltjestoetsen" aria-live="off">
+{%- for p in site.projecten %}
+{%- assign bf = p.fotos | where: "band", true %}
+{%- for f in bf %}
+{%- assign n = n | plus: 1 %}
+{%- assign dw = f.breedte | times: 380 | divided_by: f.hoogte %}
+    <li class="band-item" style="max-width: {{ dw }}px" aria-roledescription="dia"><a class="band-link" href="{{ p.url | relative_url }}"><img src="{{ f.bestand | prepend: '/assets/foto/' | relative_url }}?v={{ site.asset_versie }}" alt="{{ f.alt | escape }}" width="{{ dw }}" height="380" loading="{% if n == 1 %}eager{% else %}lazy{% endif %}"><span class="band-bijschrift">{{ p.kort | default: p.titel }}{% if p.gemeente %}, {{ p.gemeente }}{% endif %}</span></a></li>
+{%- endfor %}
+{%- endfor %}
+  </ul>
+</section>
+{%- endif -%}

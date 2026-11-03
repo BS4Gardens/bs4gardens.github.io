@@ -1,0 +1,11 @@
+<nav class="verwant" aria-label="Andere diensten">
+<h2>Andere diensten</h2>
+<ul>
+{%- for d in site.data.diensten %}
+{%- unless d.sleutel == include.huidige %}
+<li><a href="{{ d.url | relative_url }}">{{ d.titel }}</a></li>
+{%- endunless %}
+{%- endfor %}
+<li><a href="{{ '/contact/' | relative_url }}">Vraag een offerte</a></li>
+</ul>
+</nav>

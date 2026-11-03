@@ -1,0 +1,17 @@
+- title: Diensten
+  url: /diensten/
+  children:
+    - title: Tuinonderhoud
+      url: /diensten/tuinonderhoud/
+    - title: Tuinaanleg
+      url: /diensten/tuinaanleg/
+    - title: Opritten
+      url: /diensten/opritten/
+    - title: Terrassen
+      url: /diensten/terrassen/
+- title: Projecten
+  url: /projecten/
+- title: Over
+  url: /over/
+- title: Contact
+  url: /contact/

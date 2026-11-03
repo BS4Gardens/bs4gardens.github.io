@@ -1,0 +1,35 @@
+# CONTACTGEGEVENS EN WETTELIJKE VERMELDINGEN OP EEN PLEK. De voet, de contactpagina en de
+# privacyverklaring gebruiken enkel deze waarden. Een [?] is een open punt (onzichtbaar in de testversie).
+# Zet in deze opmerkingen nooit een nummer of e-mailadres: de publicatiedienst scant ook opmerkingen.
+
+# TELEFOON EN E-MAIL STAAN HIER ENKEL GECODEERD (tegen scrapers, Bert 2026-11-03). Nooit leesbaar invullen:
+# de publicatiedienst blokkeert dat en de site toont ze enkel na een klik van de bezoeker (assets/contact.js).
+# Wijzigen: python3 -I codeer_contact.py --telefoon "..." --mail "..." --schrijf (zie README, 'Contactgegevens').
+# Telefoon: gsm van Bavo. E-mail: AANNAME, door Bavo te bevestigen.
+# BEGIN GECODEERD (gemaakt met codeer_contact.py, niet met de hand wijzigen)
+telefoon_c: ["MzIgO", "TQgMz", "MgMzk", "0MA=="]
+mail_c: ["ZWIuc", "25lZH", "JhZzR", "zYkBv", "dmFi"]
+# EINDE GECODEERD
+
+# WhatsApp: true = knop 'Stuur een WhatsApp-bericht' met hetzelfde nummer als de telefoon (Bert 2026-11-03)
+whatsapp: true
+# Eerste bericht in WhatsApp (geen emoji)
+whatsapp_tekst: "Dag BS4Gardens, ik wil graag een offerte aanvragen."
+
+# Volledige URL van het Instagram-account (Bert 2026-11-03, link in bio); opent in een nieuw tabblad
+instagram: "https://www.instagram.com/bs4gardens/"
+
+# Bedrijfsgegevens (bevestigd door Bert 2026-11-03): naam, rechtsvorm (BV), ondernemingsnummer, btw.
+bedrijf: "BS4Gardens BV"
+ondernemingsnummer: "BE 1043.253.212"
+btw: "BE 1043.253.212"
+plaats: "Deinze"
+postcode: "9800"
+
+# Zetel van de BV (straat en huisnummer, zonder postcode en plaats die hierboven staan).
+# Beslissing Bert 2026-11-03: de volledige zetel staat op de site (wettelijk verplicht).
+zetel: "Ploegstraat 8"
+
+# RPR: rechtbank van de zetel, bevestigd door Bert 2026-11-03: Gent (geen afdeling vermeld).
+# Verschijnt als "RPR Gent" in voet, contactpagina en privacyverklaring. Leeg = 'RPR' verdwijnt.
+rpr: "Gent"
