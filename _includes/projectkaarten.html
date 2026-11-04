@@ -1,8 +1,27 @@
+{%- comment -%}
+Projectkaarten (home en /projecten/), gesorteerd op volgorde. Parameter kort=true: op de home de korte titel (nooit de naam van de klant),
+op /projecten/ de volledige titel. Eerder werk krijgt de zin 'Eerder werk van Bavo, uitgevoerd voor de start van BS4Gardens.'
+(voorgestelde zin van Bloem, door Burchard na te kijken). Een project met zonder_pagina: true is een kaart zonder link.
+{%- endcomment -%}
 <ul class="kaarten">
-{%- for p in site.projecten %}
+{%- assign projecten = site.projecten | sort: "volgorde" %}
+{%- for p in projecten %}
 {%- assign kf = p.fotos | where: "kaart", true | first %}
+{%- assign titel = p.titel %}
+{%- if include.kort %}{% assign titel = p.kort | default: p.titel %}{% endif %}
 <li class="kaart">
-{%- if kf %}<a href="{{ p.url | relative_url }}" tabindex="-1" aria-hidden="true"><img class="kaart-foto" src="{{ kf.bestand | prepend: '/assets/foto/' | relative_url }}?v={{ site.asset_versie }}" alt="" width="{{ kf.breedte }}" height="{{ kf.hoogte }}" loading="lazy"></a>{% endif -%}
-<h3><a href="{{ p.url | relative_url }}">{{ p.titel }}</a></h3><p>{% if p.gemeente %}{{ p.gemeente }}, {% endif %}{{ p.dienst }}</p><a class="kaartlink" href="{{ p.url | relative_url }}">Bekijk dit project</a></li>
+{%- if kf %}{% unless p.zonder_pagina %}<a href="{{ p.url | relative_url }}" tabindex="-1" aria-hidden="true">{% endunless %}<img class="kaart-foto" src="{{ kf.bestand | prepend: '/assets/foto/' | relative_url }}?v={{ site.asset_versie }}" alt="" width="{{ kf.breedte }}" height="{{ kf.hoogte }}" loading="lazy">{% unless p.zonder_pagina %}</a>{% endunless %}{% endif %}
+{%- if p.zonder_pagina %}
+<h3>{{ titel }}</h3><p>{% if p.gemeente %}{{ p.gemeente }}, {% endif %}{{ p.dienst }}</p>
+{%- else %}
+<h3><a href="{{ p.url | relative_url }}">{{ titel }}</a></h3><p>{% if p.gemeente %}{{ p.gemeente }}, {% endif %}{{ p.dienst }}</p>
+{%- endif %}
+{%- if p.eerder_werk %}
+<p class="kaart-label">Eerder werk van Bavo, uitgevoerd voor de start van BS4Gardens.</p>
+{%- endif %}
+{%- unless p.zonder_pagina %}
+<a class="kaartlink" href="{{ p.url | relative_url }}">Bekijk dit project</a>
+{%- endunless %}
+</li>
 {%- endfor %}
 </ul>

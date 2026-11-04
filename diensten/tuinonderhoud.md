@@ -4,11 +4,12 @@ title: "Tuinonderhoud in Deinze en omgeving | BS4Gardens"
 description: "Laat je tuin onderhouden door BS4Gardens: gazon, haag, borders en meer. Regelmatig of eenmalig, in Deinze en omgeving."
 permalink: /diensten/tuinonderhoud/
 dienst: tuinonderhoud
+strook: strook-haag.jpg
+strook_breedte: 960
+strook_hoogte: 300
+kop: "Tuinonderhoud, zodat je tuin er blijft uitzien"
+intro: "Een tuin heeft regelmaat nodig om mooi te blijven. BS4Gardens neemt het onderhoud over, zodat jij kan genieten."
 ---
-
-# Tuinonderhoud, zodat je tuin er blijft uitzien
-
-Een tuin heeft regelmaat nodig om mooi te blijven. BS4Gardens neemt het onderhoud over, zodat jij kan genieten.
 
 {% include foto-plek.html tekst="Een onderhouden gazon met haag en borders" %}
 

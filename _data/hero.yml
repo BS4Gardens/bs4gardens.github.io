@@ -1,0 +1,18 @@
+# Achtergrondfoto's van de hero op de home: PRECIES 3 (de CSS-animatie is op 3 foto's afgesteld, 6 s per foto).
+# liggend = breed scherm, staand = gsm. breedte/hoogte = de echte maat van het liggende bestand.
+# Alle foto's komen uit project 3 (de enige die groot genoeg is); de originelen van Bavo vervangen ze.
+- liggend: hero-1-haag-gazon.jpg
+  staand: hero-1-haag-gazon-staand.jpg
+  breedte: 920
+  hoogte: 540
+  positie: "50% 70%"
+- liggend: hero-2-siertuin.jpg
+  staand: hero-2-siertuin-staand.jpg
+  breedte: 1200
+  hoogte: 675
+  positie: "40% 60%"
+- liggend: hero-3-achtertuin.jpg
+  staand: hero-3-achtertuin-staand.jpg
+  breedte: 1200
+  hoogte: 675
+  positie: "50% 30%"

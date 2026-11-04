@@ -3,11 +3,12 @@ layout: default
 title: "Contact | BS4Gardens in Deinze"
 description: "Contacteer BS4Gardens voor een offerte of vraag over tuinonderhoud, tuinaanleg, opritten of terrassen in Deinze en omgeving."
 permalink: /contact/
+strook: strook-haag.jpg
+strook_breedte: 960
+strook_hoogte: 300
+kop: "Vraag een offerte"
+intro: "Vertel kort wat je wil laten doen en waar. We nemen zo snel mogelijk contact op."
 ---
-
-# Vraag een offerte
-
-Vertel kort wat je wil laten doen en waar. We nemen zo snel mogelijk contact op.
 
 {% include contactknoppen.html %}
 

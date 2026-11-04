@@ -3,6 +3,19 @@
    - Pauze bij hover, toetsenbordfocus en aanraken; volledig uit bij prefers-reduced-motion; stopt ook als het tabblad verborgen is.
    - Geen bibliotheek, geen cookies, geen verzoeken naar derden. */
 (function () {
+  // Hero: pauzeknop voor de wisselende achtergrondfoto's (de animatie zelf is pure CSS en staat uit bij verminderde beweging)
+  var heroKnop = document.querySelector('[data-hero="pauze"]');
+  var hero = document.querySelector(".hero-band");
+  if (heroKnop && hero) {
+    heroKnop.hidden = false;
+    heroKnop.addEventListener("click", function () {
+      var pauze = hero.classList.toggle("gepauzeerd");
+      heroKnop.textContent = pauze ? "Speel af" : "Pauzeer";
+      heroKnop.setAttribute("aria-pressed", pauze ? "true" : "false");
+      heroKnop.setAttribute("aria-label", pauze ? "Laat de achtergrondfoto's weer wisselen" : "Pauzeer de wisselende achtergrondfoto's");
+    });
+  }
+
   var band = document.querySelector(".fotoband");
   if (!band) { return; }
   var rij = band.querySelector(".band-rij");

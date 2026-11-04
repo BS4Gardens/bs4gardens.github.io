@@ -1,0 +1,14 @@
+{%- comment -%}
+Fotostrook met overlay achter de kop en de intro van een pagina (diensten, contact). Front matter: strook (bestand), strook_breedte, strook_hoogte,
+kop (de h1) en intro. De foto is decoratief (alt leeg, aria-hidden); zonder afbeelding blijft de tekst leesbaar op effen donkergroen.
+{%- endcomment -%}
+<section class="strook on-dark">
+  <img class="strook-foto" src="{{ page.strook | prepend: '/assets/foto/' | relative_url }}?v={{ site.asset_versie }}" alt="" aria-hidden="true" width="{{ page.strook_breedte }}" height="{{ page.strook_hoogte }}" loading="eager">
+  <div class="strook-overlay" aria-hidden="true"></div>
+  <div class="strook-binnen">
+    <h1>{{ page.kop }}</h1>
+    {%- if page.intro %}
+    <p class="strook-intro">{{ page.intro }}</p>
+    {%- endif %}
+  </div>
+</section>

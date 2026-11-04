@@ -4,11 +4,12 @@ title: "Oprit laten aanleggen in Deinze | BS4Gardens"
 description: "Een stevige oprit in klinkers of een ander materiaal? BS4Gardens legt opritten aan in Deinze en omgeving. Vraag een offerte."
 permalink: /diensten/opritten/
 dienst: opritten
+strook: strook-kasseien.jpg
+strook_breedte: 720
+strook_hoogte: 320
+kop: "Een oprit die tegen veel kan"
+intro: "Een oprit moet stevig zijn en er goed uitzien. Een correcte onderfundering is daarbij het belangrijkste."
 ---
-
-# Een oprit die tegen veel kan
-
-Een oprit moet stevig zijn en er goed uitzien. Een correcte onderfundering is daarbij het belangrijkste.
 
 {% include foto-plek.html tekst="Een afgewerkte oprit in klinkers" %}
 

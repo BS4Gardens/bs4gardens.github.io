@@ -4,11 +4,12 @@ title: "Tuinaanleg in Deinze en omgeving | BS4Gardens"
 description: "Een nieuwe tuin laten aanleggen? BS4Gardens zorgt voor aanleg van gazon, beplanting en verharding in Deinze en omgeving."
 permalink: /diensten/tuinaanleg/
 dienst: tuinaanleg
+strook: strook-aanleg-tijdelijk.jpg
+strook_breedte: 960
+strook_hoogte: 300
+kop: "Een tuin aanleggen die lang meegaat"
+intro: "Van een kale ruimte naar een tuin waar je graag in zit. We denken mee over indeling, materialen en beplanting."
 ---
-
-# Een tuin aanleggen die lang meegaat
-
-Van een kale ruimte naar een tuin waar je graag in zit. We denken mee over indeling, materialen en beplanting.
 
 {% include foto-plek.html tekst="Een pas aangelegde tuin met gazon en beplanting" %}
 

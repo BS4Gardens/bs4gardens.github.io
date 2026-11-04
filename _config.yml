@@ -19,11 +19,12 @@ noindex: true
 # (python3 -I controle.py --publicatie faalt zolang dit true is).
 test: true
 
-# Over-pagina: B = derde persoon (Bavo heeft...), A = ik-vorm (Ik ben Bavo...). Bavo kiest.
-over_variant: B
+# Over-pagina: C = lyrisch, derde persoon (standaard in de testversie), B = derde persoon (Bavo heeft...),
+# A = ik-vorm (Ik ben Bavo...). Bavo kiest.
+over_variant: C
 
 # Verhoog dit bij elke wijziging aan CSS, scripts of afbeeldingen (cache-busting ?v=)
-asset_versie: "20261104-1"
+asset_versie: "20261104-2"
 
 # Cookiebanner tonen. GA4 blijft uit zolang ga4_id een [?] is.
 cookiebanner: true

@@ -4,11 +4,12 @@ title: "Terras laten aanleggen in Deinze | BS4Gardens"
 description: "Een terras in tegels, klinkers of natuursteen? BS4Gardens legt terrassen aan in Deinze en omgeving. Vraag vrijblijvend een offerte."
 permalink: /diensten/terrassen/
 dienst: terrassen
+strook: strook-terras.jpg
+strook_breedte: 820
+strook_hoogte: 320
+kop: "Een terras om buiten te leven"
+intro: "Een terras is het verlengstuk van je woonkamer. We leggen het zo aan dat je het jaren probleemloos kan gebruiken."
 ---
-
-# Een terras om buiten te leven
-
-Een terras is het verlengstuk van je woonkamer. We leggen het zo aan dat je het jaren probleemloos kan gebruiken.
 
 {% include foto-plek.html tekst="Een afgewerkt terras bij een woning" %}
 

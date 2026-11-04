@@ -1,10 +1,13 @@
 {%- comment -%}
-Fotoband op de home: de foto's met band: true uit alle projecten in _projecten/ (een extra project komt vanzelf in de band).
+Fotoband op de home: de foto's met band: true (een of twee per project) uit alle projecten in _projecten/, gesorteerd op volgorde
+(een extra project komt vanzelf in de band). Bijschrift = kort (nooit de naam van de klant), plus de gemeente als die in het projectbestand staat
+en 'Eerder werk van Bavo' bij eerder werk. Een project met zonder_pagina: true krijgt geen link.
 Weergavehoogte 380 px, breedte volgt de verhouding; de bestanden zijn nooit groter dan 2x die maat en worden nooit breder getoond dan ze zijn.
 Zonder JavaScript is het een scrollbare rij; de knoppen (hidden) worden door assets/band.js getoond.
 {%- endcomment -%}
+{%- assign projecten = site.projecten | sort: "volgorde" -%}
 {%- assign totaal = 0 -%}
-{%- for p in site.projecten -%}
+{%- for p in projecten -%}
 {%- assign bf = p.fotos | where: "band", true -%}
 {%- assign totaal = totaal | plus: bf.size -%}
 {%- endfor -%}
@@ -19,12 +22,14 @@ Zonder JavaScript is het een scrollbare rij; de knoppen (hidden) worden door ass
   </div>
 {%- endif %}
   <ul class="band-rij" tabindex="0" aria-label="Foto's van projecten, veeg of gebruik de pijltjestoetsen" aria-live="off">
-{%- for p in site.projecten %}
+{%- for p in projecten %}
 {%- assign bf = p.fotos | where: "band", true %}
 {%- for f in bf %}
 {%- assign n = n | plus: 1 %}
 {%- assign dw = f.breedte | times: 380 | divided_by: f.hoogte %}
-    <li class="band-item" style="max-width: {{ dw }}px" aria-roledescription="dia"><a class="band-link" href="{{ p.url | relative_url }}"><img src="{{ f.bestand | prepend: '/assets/foto/' | relative_url }}?v={{ site.asset_versie }}" alt="{{ f.alt | escape }}" width="{{ dw }}" height="380" loading="{% if n == 1 %}eager{% else %}lazy{% endif %}"><span class="band-bijschrift">{{ p.kort | default: p.titel }}{% if p.gemeente %}, {{ p.gemeente }}{% endif %}</span></a></li>
+    <li class="band-item" style="max-width: {{ dw }}px" aria-roledescription="dia">
+<a class="band-link"{% unless p.zonder_pagina %} href="{{ p.url | relative_url }}"{% endunless %}><img src="{{ f.bestand | prepend: '/assets/foto/' | relative_url }}?v={{ site.asset_versie }}" alt="{{ f.alt | escape }}" width="{{ dw }}" height="380" loading="{% if n == 1 %}eager{% else %}lazy{% endif %}"><span class="band-bijschrift">{{ p.kort | default: p.titel }}{% if p.gemeente %}, {{ p.gemeente }}{% endif %}</span>{% if p.eerder_werk %}<span class="band-label">Eerder werk van Bavo</span>{% endif %}
+</a></li>
 {%- endfor %}
 {%- endfor %}
   </ul>

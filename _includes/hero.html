@@ -1,0 +1,26 @@
+{%- comment -%}
+Hero op de home: volle breedte, 3 achtergrondfoto's met een zachte crossfade (pure CSS, 18 s per ronde), subtiele zoom (max 5 procent),
+donkere overlay voor contrast (minstens 4,5 op 1 voor witte tekst), kop met fade-in. Foto's zijn decoratief (alt leeg, aria-hidden).
+Uit bij prefers-reduced-motion (dan één statische foto). Pauzeknop wordt door assets/band.js getoond.
+{%- endcomment -%}
+<section class="hero-band on-dark" aria-labelledby="hero-titel">
+  <div class="hero-slides" aria-hidden="true">
+{%- for s in site.data.hero %}
+{%- assign vertraging = forloop.index0 | times: 6 | minus: 1.4 %}
+    <picture class="hero-slide" style="animation-delay: {{ vertraging }}s">
+      <source media="(max-width: 47.99rem)" srcset="{{ s.staand | prepend: '/assets/foto/' | relative_url }}?v={{ site.asset_versie }}">
+      <img src="{{ s.liggend | prepend: '/assets/foto/' | relative_url }}?v={{ site.asset_versie }}" alt="" width="{{ s.breedte }}" height="{{ s.hoogte }}" style="object-position: {{ s.positie }}"{% if forloop.first %} loading="eager" fetchpriority="high"{% else %} loading="lazy"{% endif %}>
+    </picture>
+{%- endfor %}
+  </div>
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="hero-tekst">
+    <h1 id="hero-titel">Een tuin om jaren van te genieten</h1>
+    <p class="hero-sub">BS4Gardens zorgt voor je buitentuin, van het eerste ontwerp tot het onderhoud nadien.</p>
+    <div class="knoppen">
+      <a class="knop" href="{{ '/contact/' | relative_url }}">Neem contact op</a>
+      <a class="knop knop-licht" href="{{ '/projecten/' | relative_url }}">Bekijk projecten</a>
+    </div>
+  </div>
+  <button type="button" class="hero-pauze" data-hero="pauze" aria-pressed="false" aria-label="Pauzeer de wisselende achtergrondfoto's" hidden>Pauzeer</button>
+</section>

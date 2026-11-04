@@ -1,0 +1,43 @@
+# TIJDELIJKE FOTO'S, te vervangen door de originelen van Bavo (beslissing Bert 2026-11-04).
+# Decoratieve foto's (hero, fotostroken) worden volle breedte getoond, dus op een groot scherm groter dan hun echte breedte
+# (object-fit: cover, nooit uitgerekt in één richting, donkere overlay). 'factor' = weergavebreedte 1440 px gedeeld door de echte breedte.
+# controle.py --test laat dit toe; controle.py --publicatie faalt zolang deze lijst niet leeg is.
+# Foto's in de fotoband en op projectpagina's worden nooit breder getoond dan hun echte breedte en staan hier dus niet.
+- bestand: hero-1-haag-gazon.jpg
+  echte_breedte: 920
+  factor: 1.57
+- bestand: hero-1-haag-gazon-staand.jpg
+  echte_breedte: 640
+  factor: 0.6
+  opmerking: gsm, 390 px breed weergegeven, geen opschaling
+- bestand: hero-2-siertuin.jpg
+  echte_breedte: 1200
+  factor: 1.2
+- bestand: hero-2-siertuin-staand.jpg
+  echte_breedte: 600
+  factor: 0.65
+  opmerking: gsm, 390 px breed weergegeven, geen opschaling
+- bestand: hero-3-achtertuin.jpg
+  echte_breedte: 1200
+  factor: 1.2
+- bestand: hero-3-achtertuin-staand.jpg
+  echte_breedte: 600
+  factor: 0.65
+  opmerking: gsm, 390 px breed weergegeven, geen opschaling
+- bestand: strook-haag.jpg
+  echte_breedte: 960
+  factor: 1.5
+- bestand: strook-siertuin.jpg
+  echte_breedte: 1200
+  factor: 1.2
+- bestand: strook-terras.jpg
+  echte_breedte: 820
+  factor: 1.76
+- bestand: strook-kasseien.jpg
+  echte_breedte: 720
+  factor: 2.0
+- bestand: strook-aanleg-tijdelijk.jpg
+  echte_breedte: 960
+  bron_breedte: 660
+  factor: 2.18
+  opmerking: lage-resolutiefoto van project 1 (660 px), eerst 1,45x opgeschaald met behoud van verhouding (bestand 960 px), daarna volle breedte; factor is t.o.v. de bron

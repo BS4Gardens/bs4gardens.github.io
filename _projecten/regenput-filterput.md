@@ -1,14 +1,14 @@
 ---
-# TESTPROJECT (testversie 2026-11-03). De tekst en alt-teksten komen van Bloem (projecttekst eerste project, versie 2),
-# de foto's zijn uitsneden uit schermafbeeldingen (maak_fotos.py) en worden vervangen door de originelen van Bavo.
-# De klant blijft 'een klant': de voornaam komt er pas op na zijn ok. Daarom toestemming_klant: false en test_project: true.
-# controle.py laat dit enkel toe met --test; --publicatie weigert het.
+# TESTPROJECT (testversie 2026-11-04). Tekst en alt-teksten van Bloem (projecttekst eerste project, versie 3, neutrale formulering).
+# De foto's zijn uitsneden uit schermafbeeldingen (maak_fotos.py) en worden vervangen door de originelen van Bavo.
+# Geen naam van de klant, geen gemeente en geen jaartal tot Bavo ze bevestigt. Daarom toestemming_klant: false en test_project: true.
+# controle.py laat dit enkel toe met --test; --publicatie weigert het. Valt het werk voor de oprichting van de BV, dan eerder_werk: true.
 layout: default
 title: "Regenput van 5000 liter met filterput | Project van BS4Gardens"
 description: "Een regenput van 5000 liter met filterput met lavastenen, geplaatst en aangesloten op de bestaande installatie. Een project van BS4Gardens."
 titel: "Regenput van 5000 liter met filterput"
-kort: "Regenput met filterput"                 # bijschrift in de fotoband op de home
-# gemeente ontbreekt bewust (nog niet bevestigd): de pagina toont dan geen plaats
+kort: "Regenput met filterput"                 # bijschrift in de fotoband en op de kaart op de home
+volgorde: 1
 dienst: "Tuinaanleg"
 toestemming_klant: false
 test_project: true
@@ -26,7 +26,6 @@ fotos:
     alt: "Zwarte regenput van 5000 liter geplaatst in de put"
     breedte: 620
     hoogte: 745
-    band: true
   - bestand: regenput-4-sleuf-leiding.jpg
     alt: "Sleuf met leiding naar de regenput"
     breedte: 568
@@ -41,16 +40,15 @@ fotos:
     alt: "Afgewerkte plaats met putdeksel van de regenput"
     breedte: 703
     hoogte: 643
-    band: true
 ---
 
 # {{ page.titel }}
 
 {% include project-gegevens.html %}
 
-Voor een klant plaatsten we in september een regenput van 5000 liter en sloten we die aan op de bestaande installatie. Daarbij voegden we ook een filterput met lavastenen toe, zodat het water gefilterd en zuiver is. Zo kan de klant er de komende jaren van genieten.
+Bij een klant werd in september een regenput van 5000 liter geplaatst en aangesloten op de bestaande installatie. Daarbij kwam ook een filterput met lavastenen, zodat het water gefilterd en zuiver is. Zo kan de klant er de komende jaren van genieten.
 
-## Wat we deden
+## Wat er gebeurde
 
 - Uitgraven van de put met een minigraafmachine
 - Plaatsen van de regenput van 5000 liter

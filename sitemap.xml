@@ -10,6 +10,8 @@ permalink: /sitemap.xml
 {%- endif %}
 {%- endfor %}
 {%- for p in site.projecten %}
+{%- unless p.zonder_pagina %}
   <url><loc>{{ p.url | absolute_url }}</loc></url>
+{%- endunless %}
 {%- endfor %}
 </urlset>

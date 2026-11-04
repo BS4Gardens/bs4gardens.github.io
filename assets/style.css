@@ -118,7 +118,8 @@ h3 { font-size: 1.15rem; margin: 0 0 0.3em; }
 .band-link { display: block; color: var(--tekst); text-decoration: none; }
 .band-link img { display: block; width: 100%; height: auto; border-radius: 8px; background: var(--papier); }
 .band-bijschrift { display: block; margin-top: 6px; font-weight: 600; color: var(--diep); }
-.band-link:hover .band-bijschrift { text-decoration: underline; }
+.band-label { display: block; font-size: 0.9rem; color: var(--zacht); }
+a.band-link[href]:hover .band-bijschrift { text-decoration: underline; }
 @media (prefers-reduced-motion: reduce) { .band-rij { scroll-behavior: auto; } }
 
 /* Kaarten */
@@ -196,10 +197,85 @@ main th { background: var(--papier); }
 .cookie-instellingen label { display: flex; gap: 8px; align-items: flex-start; }
 .cookie-instellingen input { margin-top: 5px; }
 
+/* Donkere vlakken met foto (hero, fotostroken, oproep): overlay zodat witte tekst minstens 4,5 op 1 haalt,
+   ook boven een wit stuk lucht (controle.py rekent dit na met --hero-overlay-alpha en de overlaykleur). */
+:root { --hero-overlay-alpha: 0.62; }
+.on-dark { color: #fff; }
+.on-dark h1, .on-dark h2, .on-dark p, .on-dark a { color: #fff; }
+.on-dark .knop { background: #fff; color: var(--diep); border-color: #fff; }
+.on-dark .knop:hover { background: var(--papier); color: var(--diep); border-color: var(--papier); }
+.on-dark .knop-licht { background: transparent; color: #fff; border-color: #fff; }
+.on-dark .knop-licht:hover { background: rgba(255, 255, 255, 0.16); color: #fff; border-color: #fff; }
+.on-dark :focus-visible { outline-color: #fff; }
+
+/* Hero: volle breedte, 3 foto's, crossfade 18 s (6 s per foto), zoom max 5 procent, alles in pure CSS */
+.hero-band {
+  position: relative; overflow: hidden; display: flex; align-items: center;
+  height: 78vh; height: 78svh; min-height: 22rem; max-height: 50rem; background: var(--diep);
+}
+.hero-slides, .hero-overlay { position: absolute; inset: 0; }
+.hero-overlay { background: rgba(12, 28, 18, var(--hero-overlay-alpha)); }
+.hero-slide {
+  position: absolute; inset: 0; display: block; opacity: 0; will-change: opacity, transform;
+  animation: hero-slide 18s linear infinite both;
+}
+.hero-slide img { display: block; width: 100%; height: 100%; object-fit: cover; }
+@keyframes hero-slide {
+  0% { opacity: 0; transform: scale(1); }
+  8% { opacity: 1; }
+  33.3% { opacity: 1; }
+  41.6% { opacity: 0; transform: scale(1.05); }
+  100% { opacity: 0; transform: scale(1.05); }
+}
+.hero-tekst {
+  position: relative; width: 100%; max-width: 64rem; margin: 0 auto; padding: 24px var(--zijmarge) 48px;
+  animation: hero-in 1.4s ease-out both;
+}
+@keyframes hero-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+.hero-tekst h1 { color: #fff; font-size: 2.1rem; margin: 0 0 0.4em; max-width: 22ch; text-shadow: 0 1px 8px rgba(0, 0, 0, 0.45); }
+.hero-sub { font-size: 1.15rem; max-width: 36rem; margin: 0 0 0.4em; text-shadow: 0 1px 6px rgba(0, 0, 0, 0.45); }
+.hero-tekst .knoppen { margin: 1.2em 0 0; }
+.hero-pauze {
+  position: absolute; right: var(--zijmarge); bottom: 12px; min-height: 40px; padding: 6px 14px;
+  background: rgba(0, 0, 0, 0.45); color: #fff; border: 1px solid #fff; border-radius: 6px; font: inherit; font-size: 0.9rem; cursor: pointer;
+}
+.hero-band.gepauzeerd .hero-slide { animation-play-state: paused; }
+@media (prefers-reduced-motion: reduce) {
+  .hero-slide { animation: none; }
+  .hero-slide:first-child { opacity: 1; }
+  .hero-tekst { animation: none; }
+  .hero-pauze { display: none; }
+}
+
+/* Fotostrook achter de kop en intro van een pagina */
+.strook { position: relative; overflow: hidden; background: var(--diep); }
+.strook-foto { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.strook-overlay { position: absolute; inset: 0; background: rgba(12, 28, 18, var(--hero-overlay-alpha)); }
+.strook-binnen { position: relative; max-width: 64rem; margin: 0 auto; padding: 44px var(--zijmarge) 40px; }
+.strook-binnen h1 { margin: 0 0 0.3em; color: #fff; text-shadow: 0 1px 8px rgba(0, 0, 0, 0.45); }
+.strook-intro { font-size: 1.15rem; margin: 0; max-width: 40rem; text-shadow: 0 1px 6px rgba(0, 0, 0, 0.45); }
+
+/* Oproep met foto onderaan de home */
+.cta-foto { position: relative; overflow: hidden; margin: 2.4em 0 0.4em; border-radius: 10px; background: var(--diep); }
+.cta-foto .strook-foto, .cta-foto .strook-overlay { position: absolute; inset: 0; }
+.cta-binnen { position: relative; padding: 28px 20px; }
+.cta-binnen h2 { margin-top: 0; color: #fff; }
+.cta-binnen .knoppen { margin-bottom: 0; }
+
+/* Project: label eerder werk en kaart zonder pagina */
+.label-eerder { display: inline-block; margin: 0 0 0.8em; padding: 4px 12px; background: var(--papier); border: 1px solid var(--blad); border-radius: 999px; font-weight: 600; color: var(--diep); }
+.kaart-label { font-size: 0.9rem; color: var(--zacht); margin: 0 0 0.6em; }
+
 /* Breder scherm */
 @media (min-width: 48rem) {
   body { padding-bottom: 0; }
   h1 { font-size: 2.4rem; }
+  .hero-tekst { padding: 32px 24px 64px; }
+  .hero-tekst h1 { font-size: 3rem; }
+  .hero-sub { font-size: 1.3rem; }
+  .strook-binnen { padding: 64px 24px 56px; }
+  .cta-binnen { padding: 40px 40px; }
+  .hero-pauze { right: 24px; }
   .kop { flex-wrap: nowrap; padding: 10px 24px; }
   .logo { height: 64px; }
   .menu { width: auto; }

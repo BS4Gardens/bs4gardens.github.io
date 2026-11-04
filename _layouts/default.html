@@ -4,8 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title | escape }}</title>
-  <meta name="description" content="{{ page.description | default: site.description | escape }}">
-{%- if site.noindex %}
+{%- assign beschrijving = page.description | default: site.description %}
+{%- if page.description_c and site.over_variant == "C" %}{% assign beschrijving = page.description_c %}{% endif %}
+  <meta name="description" content="{{ beschrijving | escape }}">
+{%- if site.noindex or page.zonder_pagina %}
   <meta name="robots" content="noindex, nofollow">
 {%- endif %}
   <link rel="canonical" href="{{ page.url | absolute_url }}">
@@ -15,7 +17,7 @@
   <meta property="og:locale" content="nl_BE">
   <meta property="og:site_name" content="{{ site.title | escape }}">
   <meta property="og:title" content="{{ page.title | escape }}">
-  <meta property="og:description" content="{{ page.description | default: site.description | escape }}">
+  <meta property="og:description" content="{{ beschrijving | escape }}">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <meta property="og:image" content="{{ '/assets/og.png' | absolute_url }}?v={{ site.asset_versie }}">
   <meta property="og:image:width" content="1200">
@@ -23,6 +25,13 @@
   <meta property="og:image:alt" content="Logo van BS4Gardens">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}?v={{ site.asset_versie }}">
+{%- if page.hero %}
+{%- assign eerste = site.data.hero | first %}
+  <link rel="preload" as="image" media="(min-width: 48rem)" href="{{ eerste.liggend | prepend: '/assets/foto/' | relative_url }}?v={{ site.asset_versie }}">
+  <link rel="preload" as="image" media="(max-width: 47.99rem)" href="{{ eerste.staand | prepend: '/assets/foto/' | relative_url }}?v={{ site.asset_versie }}">
+{%- elsif page.strook %}
+  <link rel="preload" as="image" href="{{ page.strook | prepend: '/assets/foto/' | relative_url }}?v={{ site.asset_versie }}">
+{%- endif %}
   <script src="{{ '/assets/contact.js' | relative_url }}?v={{ site.asset_versie }}" defer></script>
 {%- if page.url == "/" %}
   <script src="{{ '/assets/band.js' | relative_url }}?v={{ site.asset_versie }}" defer></script>
@@ -57,6 +66,12 @@
       </ul>
     </nav>
   </header>
+
+{%- if page.hero %}
+{% include hero.html %}
+{%- elsif page.strook %}
+{% include strook.html %}
+{%- endif %}
 
   <main id="inhoud">
     {{ content }}
