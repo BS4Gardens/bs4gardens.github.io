@@ -171,7 +171,7 @@ main th { background: var(--papier); }
 .testmelding { max-width: 64rem; margin: 0 auto; padding: 0 var(--zijmarge) 16px; font-size: 0.875rem; color: #d3e0d7; }
 @media (min-width: 48rem) { .testmelding { padding: 0 24px 16px; } }
 .voet-logo { height: 56px; width: auto; }
-.voet-links { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0 20px; }
+.voet-links { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 0 20px; }
 .voet .linkknop, .voet-links .linkknop { color: #fff; }
 .voet-links .linkknop:hover { color: #fff; }
 
@@ -266,6 +266,42 @@ main th { background: var(--papier); }
 .label-eerder { display: inline-block; margin: 0 0 0.8em; padding: 4px 12px; background: var(--papier); border: 1px solid var(--blad); border-radius: 999px; font-weight: 600; color: var(--diep); }
 .kaart-label { font-size: 0.9rem; color: var(--zacht); margin: 0 0 0.6em; }
 
+/* Voorwaarden (voorlopige tekst, pagina /voorwaarden/): lange tekst, genummerde artikels, tabel en aankruisvakken */
+.voorwaarden { overflow-wrap: anywhere; }
+.voorwaarden h2.deel { margin-top: 2em; padding-top: 0.4em; border-top: 3px solid var(--blad); }
+.voorwaarden h2.bijlage { margin-top: 2.4em; padding-top: 0.4em; border-top: 3px solid var(--blad); }
+.voorwaarden h3 { font-size: 1.1rem; margin: 1.6em 0 0.4em; color: var(--diep); scroll-margin-top: 12px; }
+.voorwaarden h2, .voorwaarden h3[id] { scroll-margin-top: 12px; }
+.voorwaarden h3.sub { margin-top: 1.4em; }
+.voorwaarden p { margin: 0 0 0.7em; }
+.voorwaarden .lid-sub { margin-left: 1.4em; }
+.voorwaarden .nr { font-weight: 600; color: var(--diep); }
+.voorwaarden .vw-lijst { margin: 0 0 0.9em; padding-left: 1.4em; }
+.voorwaarden .vw-lijst li { margin: 0 0 0.35em; }
+.voorwaarden table { font-size: 0.95rem; overflow-wrap: normal; }
+.voorwaarden th:first-child, .voorwaarden td:first-child { min-width: 7.5rem; }
+.voorwaarden th:last-child, .voorwaarden td:last-child { min-width: 10rem; }
+.voorwaarden .vw-mail { padding: 0; font-size: inherit; line-height: inherit; }
+.open-wrap { white-space: normal; }
+.nb { white-space: nowrap; }
+.vw-melding { margin: 0 0 1em; padding: 12px 16px; background: var(--open-bg); color: var(--open-tekst); border-left: 6px solid #b59a00; border-radius: 4px; }
+.vw-download { margin: 0 0 1.4em; }
+.vw-download .knop { margin-right: 6px; }
+.vw-bestand { color: var(--zacht); }
+.vw-inhoud { margin: 0 0 2em; padding: 16px 20px; background: var(--papier); border: 1px solid var(--lijn); border-radius: 8px; }
+.vw-inhoud h2 { margin: 0 0 0.5em; font-size: 1.15rem; }
+.vw-inhoud ul { list-style: none; margin: 0; padding: 0; }
+.vw-inhoud li { max-width: none; margin: 0.15em 0; }
+.vw-inhoud > ul > li { margin-top: 0.9em; font-weight: 600; }
+.vw-inhoud > ul > li > ul { margin-left: 0.4em; font-weight: 400; }
+.vw-inhoud a { display: inline-block; padding: 3px 0; }
+.vw-vak { position: relative; padding-left: 2em; margin: 0 0 0.7em; }
+.vw-vak .vak { position: absolute; left: 0; top: 0.28em; width: 1.1em; height: 1.1em; border: 2px solid var(--tekst); border-radius: 2px; background: #fff; }
+@media (min-width: 48rem) {
+  .vw-inhoud > ul { column-count: 2; column-gap: 32px; }
+  .vw-inhoud > ul > li { break-inside: avoid; }
+}
+
 /* Breder scherm */
 @media (min-width: 48rem) {
   body { padding-bottom: 0; }
@@ -294,7 +330,7 @@ main th { background: var(--papier); }
   .punten { grid-template-columns: repeat(3, 1fr); }
   .vaste-balk { display: none; }
   .voet-binnen { grid-template-columns: auto 1fr 1fr auto; align-items: center; padding: 24px; gap: 24px; }
-  .voet-links { flex-direction: column; gap: 0; }
+  .voet-links { flex-direction: column; align-items: flex-start; gap: 0; }
   .cookiebanner { left: 24px; right: auto; bottom: 24px; }
 }
 @media (min-width: 64rem) {

@@ -5,7 +5,7 @@
 # TELEFOON EN E-MAIL STAAN HIER ENKEL GECODEERD (tegen scrapers, Bert 2026-11-03). Nooit leesbaar invullen:
 # de publicatiedienst blokkeert dat en de site toont ze enkel na een klik van de bezoeker (assets/contact.js).
 # Wijzigen: python3 -I codeer_contact.py --telefoon "..." --mail "..." --schrijf (zie README, 'Contactgegevens').
-# Telefoon: gsm van Bavo. E-mail: AANNAME, door Bavo te bevestigen.
+# Telefoon: gsm van Bavo. E-mail: bevestigd door Bert 2026-11-04.
 # BEGIN GECODEERD (gemaakt met codeer_contact.py, niet met de hand wijzigen)
 telefoon_c: ["MzIgO", "TQgMz", "MgMzk", "0MA=="]
 mail_c: ["ZWIuc", "25lZH", "JhZzR", "zYkBv", "dmFi"]
@@ -30,6 +30,6 @@ postcode: "9800"
 # Beslissing Bert 2026-11-03: de volledige zetel staat op de site (wettelijk verplicht).
 zetel: "Ploegstraat 8"
 
-# RPR: rechtbank van de zetel, bevestigd door Bert 2026-11-03: Gent (geen afdeling vermeld).
-# Verschijnt als "RPR Gent" in voet, contactpagina en privacyverklaring. Leeg = 'RPR' verdwijnt.
-rpr: "Gent"
+# RPR: rechtbank van de zetel, bevestigd door Bert 2026-11-03: Gent; afdeling Gent toegevoegd op 2026-11-11 (zoals in de voorwaarden).
+# Verschijnt als "RPR Gent, afdeling Gent" in voet, contactpagina en privacyverklaring. Leeg = 'RPR' verdwijnt.
+rpr: "Gent, afdeling Gent"

@@ -24,7 +24,7 @@ test: true
 over_variant: C
 
 # Verhoog dit bij elke wijziging aan CSS, scripts of afbeeldingen (cache-busting ?v=)
-asset_versie: "20261104-2"
+asset_versie: "20261111-2"
 
 # Cookiebanner tonen. GA4 blijft uit zolang ga4_id een [?] is.
 cookiebanner: true
@@ -51,4 +51,6 @@ exclude:
   - maak_logo.py
   - maak_fotos.py
   - codeer_contact.py
+  - maak_voorwaarden.py
+  - __pycache__
   - sjablonen

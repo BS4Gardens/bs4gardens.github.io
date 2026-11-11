@@ -1,8 +1,9 @@
 ---
-# TESTPROJECT zonder eigen pagina (Bloem raadt een pagina met één foto van een werf in uitvoering af): enkel een kaart op de home en
+# Project zonder eigen pagina (Bloem raadt een pagina met één foto van een werf in uitvoering af): enkel een kaart op de home en
 # op /projecten/ en een foto in de fotoband, zonder link. De pagina bestaat technisch (Jekyll maakt ze voor elk projectbestand), staat
 # op noindex, zit niet in de sitemap en wordt nergens gelinkt. Tekst en alt van Bloem (projecttekst project 2, versie 3, neutrale formulering).
 # Geen naam van de klant, geen gemeente en geen jaartal tot Bavo ze bevestigt. Foto: uitsnede van een WhatsApp-foto, te vervangen.
+# 2026-11-11: Bert bevestigt dat de klant goedkeuring gaf voor de projectfoto's: toestemming_klant: true, test_project weg.
 layout: default
 title: "Tuinafscheiding met houten schermen | Project van BS4Gardens"
 description: "Een nieuwe tuinafscheiding met houten schermen, geplaatst bij een klant zodat de tuin weer alle privacy krijgt. Een project van BS4Gardens."
@@ -11,8 +12,7 @@ kort: "Tuinafscheiding met houten schermen"
 volgorde: 3
 dienst: "Tuinafscheiding"
 zonder_pagina: true
-toestemming_klant: false
-test_project: true
+toestemming_klant: true
 fotos:
   - bestand: tuinafscheiding-1-houten-scherm.jpg
     alt: "Nieuw houten schermelement op een betonnen onderplaat, uitgelijnd met een spanlijn tijdens het plaatsen van een tuinafscheiding"

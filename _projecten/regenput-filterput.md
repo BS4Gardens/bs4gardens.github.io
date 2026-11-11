@@ -1,8 +1,8 @@
 ---
-# TESTPROJECT (testversie 2026-11-04). Tekst en alt-teksten van Bloem (projecttekst eerste project, versie 3, neutrale formulering).
+# Tekst en alt-teksten van Bloem (projecttekst eerste project, versie 3, neutrale formulering).
 # De foto's zijn uitsneden uit schermafbeeldingen (maak_fotos.py) en worden vervangen door de originelen van Bavo.
-# Geen naam van de klant, geen gemeente en geen jaartal tot Bavo ze bevestigt. Daarom toestemming_klant: false en test_project: true.
-# controle.py laat dit enkel toe met --test; --publicatie weigert het. Valt het werk voor de oprichting van de BV, dan eerder_werk: true.
+# Geen naam van de klant, geen gemeente en geen jaartal tot Bavo ze bevestigt. Valt het werk voor de oprichting van de BV, dan eerder_werk: true.
+# 2026-11-11: Bert bevestigt dat de klant goedkeuring gaf voor de projectfoto's: toestemming_klant: true, test_project weg.
 layout: default
 title: "Regenput van 5000 liter met filterput | Project van BS4Gardens"
 description: "Een regenput van 5000 liter met filterput met lavastenen, geplaatst en aangesloten op de bestaande installatie. Een project van BS4Gardens."
@@ -10,8 +10,7 @@ titel: "Regenput van 5000 liter met filterput"
 kort: "Regenput met filterput"                 # bijschrift in de fotoband en op de kaart op de home
 volgorde: 1
 dienst: "Tuinaanleg"
-toestemming_klant: false
-test_project: true
+toestemming_klant: true
 fotos:
   - bestand: regenput-1-put-minigraafmachine.jpg
     alt: "Uitgegraven put in een weide met een minigraafmachine op de achtergrond"
