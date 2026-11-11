@@ -1,14 +1,17 @@
+{%- assign ga = site.ga4_id | default: "" -%}
+{%- unless ga == "" or ga contains "[?" -%}
 <div id="cookiebanner" class="cookiebanner" role="dialog" aria-labelledby="cookie-titel" hidden>
   <h2 id="cookie-titel">Cookies</h2>
-  <p>BS4Gardens BV gebruikt alleen een noodzakelijke opslag die je keuze onthoudt. Met jouw toestemming meten we ook met Google Analytics hoe de website gebruikt wordt. Weiger je, dan werkt de website gewoon en wordt er niets gemeten. Je kan je keuze altijd wijzigen of intrekken via "Cookie-instellingen" onderaan elke pagina. <a href="{{ '/cookies/' | relative_url }}">Lees meer over cookies</a></p>
+  <p>BS4Gardens BV wil met Google Analytics meten hoe de website gebruikt wordt: welke pagina's, diensten en projecten je bekijkt en of je klikt om te bellen, te mailen, WhatsApp of Instagram. Google ontvangt daarbij onder meer je IP-adres. Dat doen we enkel met jouw toestemming. Weiger je, dan werkt de website gewoon en wordt er niets gemeten. Je keuze bewaren we 6 maanden in je browser. Je kan ze altijd wijzigen of intrekken via "Cookie-instellingen" onderaan elke pagina. <a href="{{ '/cookies/' | relative_url }}">Lees meer over cookies</a> en onze <a href="{{ '/privacy/' | relative_url }}">privacyverklaring</a>.</p>
   <div class="cookie-acties">
     <button type="button" class="knop" data-cookie="alles">Alles accepteren</button>
     <button type="button" class="knop" data-cookie="nodig">Alles weigeren</button>
     <button type="button" class="linkknop" data-cookie="instellingen" aria-expanded="false" aria-controls="cookie-instellingen">Instellingen</button>
   </div>
   <div id="cookie-instellingen" class="cookie-instellingen" hidden>
-    <label><input type="checkbox" checked disabled> Noodzakelijk (altijd aan): onthoudt je keuze, 6 maanden</label>
+    <label><input type="checkbox" checked disabled> Noodzakelijk (altijd aan): onthoudt je keuze in je browser, 6 maanden</label>
     <label><input type="checkbox" id="cookie-stat"> Statistieken (Google Analytics, Google): hoe de website gebruikt wordt, cookies 13 maanden</label>
     <button type="button" class="knop" data-cookie="opslaan">Keuze opslaan</button>
   </div>
 </div>
+{%- endunless -%}

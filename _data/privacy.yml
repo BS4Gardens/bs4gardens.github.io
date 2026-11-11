@@ -1,0 +1,48 @@
+# Feitenlijst privacy BS4Gardens, versie 2 (Burchard 2026-11-11). Leidend voor privacy.md, cookies.md, de cookiebanner
+# en artikel 20bis van de Algemene voorwaarden (voorlopig v3). Wijzigt hier iets: alle lagen aanpassen, nieuw versienummer.
+versie: 2
+datum: "11 november 2026"
+verantwoordelijke: "BS4Gardens BV, Ploegstraat 8, 9800 Deinze, ondernemingsnummer 1043.253.212, RPR Gent, afdeling Gent"
+contact_mail: "gecodeerd in _data/contact.yml (mail_c); hier bewust niet leesbaar, de repo is publiek"   # op de site enkel via de klikknop (mail.html), nooit leesbaar in HTML
+keuze_bewaren_dagen: 182          # localStorage bs4g-cookies, enkel als GA4 aan staat
+ga_cookie_dagen: 395              # _ga en _ga_<code>, niet verlengd bij elk bezoek
+ga_bewaring: "2 maanden"          # zo instellen in GA4 zodra GA4 aan gaat
+ga_gebeurtenissen:
+  - "klik om te bellen"
+  - "klik op WhatsApp"
+  - "klik om te mailen"
+  - "klik op Instagram"
+  - "welke dienstpagina je bekijkt"
+  - "welk project je bekijkt"
+bewaring:
+  aanvraag_zonder_opdracht: "2 jaar na het laatste contact"
+  facturen_boekhouding: "zolang de fiscale en boekhoudwetgeving vraagt, in de regel 7 jaar vanaf 1 januari van het jaar na de factuurdatum"
+  overige_opdrachtgegevens: "5 jaar na het einde van de opdracht"
+  geschil_invordering: "tot afgehandeld"
+  fotos_promotie: "zolang gebruikt of tot intrekking; verspreid drukwerk niet terug"
+  bewijs_toestemming_fotos: "zolang de foto's gebruikt worden, daarna 5 jaar"
+  github_logs: "volgens het privacybeleid van GitHub"
+ontvangers:
+  - "GitHub, hosting van de website"
+  - "Google (Google Analytics), enkel met toestemming en enkel als statistieken aan staan"
+  - "Microsoft (Microsoft 365), e-mail"
+  - "Fiscorum, boekhoudkantoor"
+  - "Yuki, boekhoudpakket, ook Peppol-facturatie"
+  - "bank, voor betalingen"
+  - "onderaannemers, enkel voor hun deel van het werk"
+  - "KLIP (Vlaamse overheid), enkel de ligging van de werf, vóór grondwerken"
+  - "Baloise via makelaarskantoor Remue, verzekeraar, bij schade"
+  - "advocaat of gerechtsdeurwaarder, enkel bij geschil of invordering"
+  - "hulpmiddelen voor tekst- en mailverwerking van het team, waaronder AI-diensten van Anthropic (VS)"
+  - "overheden, als de wet dat vraagt"
+buiten_europa: ["Microsoft", "Meta", "GitHub", "Anthropic", "Google (enkel als statistieken aan staan)"]
+waarborgen:
+  google: "EU-VS Data Privacy Framework en standaardcontractbepalingen"
+  andere: "op te vragen bij BS4Gardens"
+fotos:
+  kanalen: ["website", "Instagram en andere sociale media", "offertes voor andere klanten", "folders"]
+  particulier_en_woning: "opt-in, apart vakje, niet vooraf aangekruist"
+  professioneel_geen_woning: "gebruik tenzij de klant weigert"
+  anoniem: "geen personen, naam, straat, huisnummer, gemeente, nummerplaten of herkenbare gevel"
+  gemeente_voornaam: "enkel met apart vakje"
+  fotos_van_klant: "nooit voor promotie zonder toestemming"

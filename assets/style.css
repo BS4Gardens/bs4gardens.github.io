@@ -282,6 +282,7 @@ main th { background: var(--papier); }
 .voorwaarden th:first-child, .voorwaarden td:first-child { min-width: 7.5rem; }
 .voorwaarden th:last-child, .voorwaarden td:last-child { min-width: 10rem; }
 .voorwaarden .vw-mail { padding: 0; font-size: inherit; line-height: inherit; }
+main p .linkknop { padding: 0; font-size: inherit; line-height: inherit; }
 .open-wrap { white-space: normal; }
 .nb { white-space: nowrap; }
 .vw-melding { margin: 0 0 1em; padding: 12px 16px; background: var(--open-bg); color: var(--open-tekst); border-left: 6px solid #b59a00; border-radius: 4px; }
