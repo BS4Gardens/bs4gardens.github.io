@@ -3,7 +3,7 @@ layout: default
 title: "Algemene voorwaarden | BS4Gardens"
 description: "Voorlopige algemene voorwaarden van BS4Gardens voor offertes, opdrachten en facturen. Versie 2026-11-11, nog niet bevestigd."
 permalink: /voorwaarden/
-juridisch: voorlopig-burchard-20261111-v3
+juridisch: voorlopig-burchard-20261111-v4
 ---
 {% comment %}
 GEGENEREERD door maak_voorwaarden.py uit de voorlopige tekst van Burchard (vault). Niet met de hand wijzigen:
@@ -12,8 +12,8 @@ Pas na bevestiging door BS4Gardens en nalezing door een advocaat: [?] invullen e
 {% endcomment %}
 <div class="voorwaarden">
 <h1>Algemene voorwaarden BS4Gardens</h1>
-<p class="vw-melding" role="note"><strong>Voorlopige versie, nog niet bevestigd door BS4Gardens.</strong> <span class="nb">Versie 2026-11-11 (voorlopig, v3).</span></p>
-<p class="vw-download"><a class="knop" href="{{ '/assets/BS4Gardens-Algemene-voorwaarden-20261111-v3-voorlopig.pdf' | relative_url }}?v={{ site.asset_versie }}" download="BS4Gardens-Algemene-voorwaarden-20261111-v3-voorlopig.pdf" type="application/pdf">Download de voorwaarden als pdf</a> <span class="vw-bestand">(pdf, 62 kB)</span></p>
+<p class="vw-melding" role="note"><strong>Voorlopige versie, nog niet bevestigd door BS4Gardens.</strong> <span class="nb">Versie 2026-11-11 (voorlopig, v4).</span></p>
+<p class="vw-download"><a class="knop" href="{{ '/assets/BS4Gardens-Algemene-voorwaarden-20261111-v4-voorlopig.pdf' | relative_url }}?v={{ site.asset_versie }}" download="BS4Gardens-Algemene-voorwaarden-20261111-v4-voorlopig.pdf" type="application/pdf">Download de voorwaarden als pdf</a> <span class="vw-bestand">(pdf, 62 kB)</span></p>
 <nav class="vw-inhoud" aria-labelledby="vw-inhoud-kop">
 <h2 id="vw-inhoud-kop">Inhoud</h2>
 <ul>
@@ -63,7 +63,7 @@ Pas na bevestiging door BS4Gardens en nalezing door een advocaat: [?] invullen e
 </ul></li>
 </ul>
 </nav>
-<p class="vw-intro">Versie 2026-11-11 (voorlopig, v3)</p>
+<p class="vw-intro">Versie 2026-11-11 (voorlopig, v4)</p>
 <p class="vw-intro">Dit is een voorlopige tekst. De definitieve versie volgt; de versie die u bij uw offerte of opdrachtbevestiging ontvangt, is de versie die voor uw opdracht geldt.</p>
 <p class="vw-intro">BS4Gardens BV, Ploegstraat 8, 9800 Deinze, ondernemingsnummer en btw BE 1043.253.212, RPR Gent, afdeling Gent, IBAN BE13 7330 7814 4139, <button type="button" class="linkknop vw-mail" data-contact="mail" hidden>toon e-mailadres</button><noscript>(zie de <a href="{{ '/contact/' | relative_url }}">contactpagina</a> en het zeteladres)</noscript>, https://bs4gardens.github.io</p>
 <p class="vw-intro">Deze voorwaarden gelden voor alle offertes, opdrachten, werken, leveringen en facturen van BS4Gardens, met of zonder offerte. Bepalingen die enkel voor consumenten of enkel voor professionele klanten gelden, zijn als dusdanig aangeduid.</p>
@@ -264,18 +264,19 @@ Pas na bevestiging door BS4Gardens en nalezing door een advocaat: [?] invullen e
 <p class="tekst">U herroept door ons een duidelijke verklaring te sturen (per e-mail aan <button type="button" class="linkknop vw-mail" data-contact="mail" hidden>toon e-mailadres</button><noscript>(zie de <a href="{{ '/contact/' | relative_url }}">contactpagina</a> en het zeteladres)</noscript> of per brief aan BS4Gardens BV, Ploegstraat 8, 9800 Deinze). U kunt het modelformulier hieronder gebruiken, maar dat hoeft niet. U bent op tijd als u uw verklaring verstuurt vóór de termijn verstreken is.</p>
 <p class="tekst">Wij vragen de eerste betaling voor het materiaal pas na het verstrijken van deze termijn en bestellen het materiaal ook niet eerder, tenzij u vraagt dat de werken eerder starten. Bij herroeping betalen wij alle ontvangen betalingen terug, uiterlijk 14 dagen nadat wij uw beslissing ontvingen, met hetzelfde betaalmiddel tenzij u anders vraagt. Hebt u gevraagd dat de werken binnen de herroepingstermijn starten, dan betaalt u een bedrag in verhouding tot wat al is uitgevoerd op het ogenblik van uw herroeping. Is de dienst volledig uitgevoerd nadat u om de start vroeg en erkende dat u dan uw herroepingsrecht verliest, dan kunt u niet meer herroepen.</p>
 <p class="tekst">Werden goederen geleverd, dan geeft u ze terug of houdt u ze voor ons ter beschikking. De rechtstreekse kosten van het terugzenden zijn voor u. Werden de goederen bij het sluiten van de overeenkomst bij u thuis geleverd en kunnen ze niet per gewone post worden teruggezonden, dan halen wij ze op onze kosten op.</p>
-<h3 class="sub">Modelformulier voor herroeping <span class="open open-wrap">[?: te vergelijken met bijlage 2 bij boek VI WER; die bijlage kon niet worden nagelezen]</span></h3>
-<p class="tekst">(dit formulier alleen invullen en terugzenden als u de overeenkomst wilt herroepen)</p>
-<p class="tekst">– Aan BS4Gardens BV, Ploegstraat 8, 9800 Deinze, <button type="button" class="linkknop vw-mail" data-contact="mail" hidden>toon e-mailadres</button><noscript>(zie de <a href="{{ '/contact/' | relative_url }}">contactpagina</a> en het zeteladres)</noscript>:</p>
-<p class="tekst">– Ik/Wij (*) deel/delen (*) u hierbij mede dat ik/wij (*) onze overeenkomst betreffende de verkoop van de volgende goederen/levering van de volgende dienst (*) herroep/herroepen (*):</p>
-<p class="tekst">– Besteld op (*)/ontvangen op (*):</p>
-<p class="tekst">– Naam/Namen consument(en):</p>
-<p class="tekst">– Adres consument(en):</p>
-<p class="tekst">– Handtekening van consument(en) (alleen wanneer dit formulier op papier wordt ingediend):</p>
-<p class="tekst">– Datum:</p>
+<h3 class="sub">Modelformulier voor herroeping</h3>
+<p class="tekst">(Dit formulier alleen invullen en terugzenden als u de overeenkomst wilt herroepen)</p>
+<p class="tekst">– Aan BS4Gardens BV, Ploegstraat 8, 9800 Deinze, <button type="button" class="linkknop vw-mail" data-contact="mail" hidden>toon e-mailadres</button><noscript>(zie de <a href="{{ '/contact/' | relative_url }}">contactpagina</a> en het zeteladres)</noscript></p>
+<p class="tekst">– Ik/Wij (*) deel/delen (*) u hierbij mede dat ik/wij (*) onze overeenkomst betreffende de verkoop van de volgende goederen (*)/levering van de volgende dienst (*) herroep/herroepen (*)</p>
+<p class="tekst">……………………………………………………………………</p>
+<p class="tekst">– Besteld op (*)/Ontvangen op (*) ……………………………</p>
+<p class="tekst">– Naam/Namen consument(en) ……………………………</p>
+<p class="tekst">– Adres consument(en) ……………………………</p>
+<p class="tekst">– Datum ……………………………</p>
+<p class="tekst">– Handtekening van consument(en) (alleen wanneer dit formulier op papier wordt ingediend) ……………………………</p>
 <p class="tekst">(*) Doorhalen wat niet van toepassing is.</p>
 <h2 id="bijlage-b" class="bijlage">Bijlage B – Aanvaardingsblok onderaan de offerte</h2>
-<p class="tekst">Voor akkoord met deze offerte, met de betaling van het materiaal in twee delen (50 % bij aanvaarding van deze offerte, 50 % bij levering van het materiaal, artikel 5) en met de bijgevoegde Algemene voorwaarden BS4Gardens (versie 2026-11-11, voorlopig, v3), die ik vóór ondertekening ontving.</p>
+<p class="tekst">Voor akkoord met deze offerte, met de betaling van het materiaal in twee delen (50 % bij aanvaarding van deze offerte, 50 % bij levering van het materiaal, artikel 5) en met de bijgevoegde Algemene voorwaarden BS4Gardens (versie 2026-11-11, voorlopig, v4), die ik vóór ondertekening ontving.</p>
 <p class="tekst">Naam: …………… Datum: …………… Handtekening: ……………</p>
 <p class="tekst">(Aanvaarding per e-mail met verwijzing naar deze offerte is ook mogelijk.)</p>
 <p class="tekst">Enkel voor particulieren, offerte gegeven bij u thuis, telefonisch of per e-mail:</p>
@@ -288,6 +289,6 @@ Pas na bevestiging door BS4Gardens en nalezing door een advocaat: [?] invullen e
 <p class="vw-vak"><span class="vak" role="img" aria-label="aankruisvak"></span> BS4Gardens mag daarbij ook mijn voornaam vermelden.</p>
 <p class="tekst">Intrekken kan altijd via <button type="button" class="linkknop vw-mail" data-contact="mail" hidden>toon e-mailadres</button><noscript>(zie de <a href="{{ '/contact/' | relative_url }}">contactpagina</a> en het zeteladres)</noscript> of per bericht.</p>
 <h2 id="bijlage-c" class="bijlage">Bijlage C – Vermelding op de factuur</h2>
-<p class="tekst">"Betaalbaar binnen 14 kalenderdagen na factuurdatum op rekening BE13 7330 7814 4139 van BS4Gardens BV met vermelding van de gestructureerde mededeling (OGM) op deze factuur. Op deze factuur zijn de Algemene voorwaarden BS4Gardens (versie 2026-11-11, voorlopig, v3) van toepassing, die u ontving bij de offerte of opdrachtbevestiging en die op <a href="{{ '/voorwaarden/' | relative_url }}">https://bs4gardens.github.io/voorwaarden/</a> staan. Consumenten: bij laattijdige betaling volgt eerst een kosteloze herinnering. Hoe wij met uw gegevens omgaan, leest u in artikel 20bis van de voorwaarden en op <a href="{{ '/privacy/' | relative_url }}">https://bs4gardens.github.io/privacy/</a>."</p>
+<p class="tekst">"Betaalbaar binnen 14 kalenderdagen na factuurdatum op rekening BE13 7330 7814 4139 van BS4Gardens BV met vermelding van de gestructureerde mededeling (OGM) op deze factuur. Op deze factuur zijn de Algemene voorwaarden BS4Gardens (versie 2026-11-11, voorlopig, v4) van toepassing, die u ontving bij de offerte of opdrachtbevestiging en die op <a href="{{ '/voorwaarden/' | relative_url }}">https://bs4gardens.github.io/voorwaarden/</a> staan. Consumenten: bij laattijdige betaling volgt eerst een kosteloze herinnering. Hoe wij met uw gegevens omgaan, leest u in artikel 20bis van de voorwaarden en op <a href="{{ '/privacy/' | relative_url }}">https://bs4gardens.github.io/privacy/</a>."</p>
 <p class="tekst">Let op: deze vermelding maakt de voorwaarden niet alsnog van toepassing; ze werken enkel als de klant ze vóór het sluiten van de overeenkomst ontving en aanvaardde (artikel 2).</p>
 </div>
