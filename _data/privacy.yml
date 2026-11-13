@@ -1,7 +1,10 @@
-# Feitenlijst privacy BS4Gardens, versie 2 (Burchard 2026-11-11). Leidend voor privacy.md, cookies.md, de cookiebanner
-# en artikel 20bis van de Algemene voorwaarden (voorlopig v3). Wijzigt hier iets: alle lagen aanpassen, nieuw versienummer.
-versie: 2
-datum: "11 november 2026"
+# Feitenlijst privacy BS4Gardens, versie 3 (Burchard 2026-11-13), VARIANT B (site nog op GitHub Pages). Leidend voor privacy.md, cookies.md en de cookiebanner.
+# Eigen versie en datum, los van de voorwaarden (art. 17.5 vanaf v7); de korte versie staat in artikel 17, foto's in artikel 16.
+# Wijzigt hier iets: alle lagen aanpassen en nieuw versienummer; klopt artikel 17 niet meer, dan ook de voorwaarden.
+# datum = publicatiedatum. Gaat de site naar een Europese host (Combell): variant A, versie 4 met nieuwe datum (zie vaultnotitie, punt 9).
+versie: 3
+datum: "13 november 2026"
+kort_in_voorwaarden: "artikel 17"
 verantwoordelijke: "BS4Gardens BV, Ploegstraat 8, 9800 Deinze, ondernemingsnummer 1043.253.212, RPR Gent, afdeling Gent"
 contact_mail: "gecodeerd in _data/contact.yml (mail_c); hier bewust niet leesbaar, de repo is publiek"   # op de site enkel via de klikknop (mail.html), nooit leesbaar in HTML
 keuze_bewaren_dagen: 182          # localStorage bs4g-cookies, enkel als GA4 aan staat
@@ -15,34 +18,52 @@ ga_gebeurtenissen:
   - "welke dienstpagina je bekijkt"
   - "welk project je bekijkt"
 bewaring:
-  aanvraag_zonder_opdracht: "2 jaar na het laatste contact"
-  facturen_boekhouding: "zolang de fiscale en boekhoudwetgeving vraagt, in de regel 7 jaar vanaf 1 januari van het jaar na de factuurdatum"
-  overige_opdrachtgegevens: "5 jaar na het einde van de opdracht"
+  aanvraag_zonder_opdracht: "5 jaar na het laatste contact (beslissing Bert 2026-11-13)"
+  facturen_boekhouding: "zolang de fiscale en boekhoudwetgeving vraagt, in de regel 7 jaar vanaf 1 januari van het jaar na de factuurdatum (boekhoudkantoor bevestigt)"
+  overige_opdrachtgegevens: "5 jaar na het einde van de opdracht (offerte, afspraken, dagoverzichten, correspondentie, werffoto's)"
   geschil_invordering: "tot afgehandeld"
-  fotos_promotie: "zolang gebruikt of tot intrekking; verspreid drukwerk niet terug"
-  bewijs_toestemming_fotos: "zolang de foto's gebruikt worden, daarna 5 jaar"
-  github_logs: "volgens het privacybeleid van GitHub"
+  fotos_promotie: "zolang gebruikt of tot intrekking of weigering; verspreid drukwerk niet terug"
+  bewijs_keuze_fotos: "zolang de foto's gebruikt worden, daarna 5 jaar"
+  hosting_logs: "volgens het privacybeleid van de webhost (naam op vraag)"
+  reservekopieen: "een beperkte tijd, versleuteld, tot ze daar volgens het bewaarschema verdwijnen; enkel voor herstel"
+herkomst:
+  - "de klant zelf"
+  - "onderneming of vereniging van de contactpersoon"
+  - "bank: naam, rekeningnummer, mededeling bij betaling"
+  - "KLIP: ligging kabels en leidingen"
+  - "KBO of VIES: nazicht ondernemings- of btw-nummer, als we dat nakijken"
+# Ontvangers als categorie zonder naam (keuze Bert 2026-11-13: neutraal zoals in de AV, een wissel van leverancier
+# verandert de tekst niet). De repo is publiek: ook hier geen namen; de lijst met namen staat in de vaultnotitie
+# 'BS4Gardens - Privacyverklaring (voorstel afstemming op voorwaarden v7 20261113)'. Google en Meta blijven met naam
+# (cookies van Google enkel als GA4 aan staat; Meta enkel bij eigen gebruik van WhatsApp of Instagram door de klant).
 ontvangers:
-  - "GitHub, hosting van de website"
+  - "webhost (Amerikaans bedrijf), ook broncode, projectfoto's en voornamen met toestemming"   # variant B; variant A: twee regels (webhost in België; leverancier broncode en publicatie, Amerikaans bedrijf)
   - "Google (Google Analytics), enkel met toestemming en enkel als statistieken aan staan"
-  - "Microsoft (Microsoft 365), e-mail"
-  - "Fiscorum, boekhoudkantoor"
-  - "Yuki, boekhoudpakket, ook Peppol-facturatie"
+  - "leverancier van e-mail en cloudopslag (Amerikaans bedrijf)"
+  - "dienstverlener in België voor informatica, opslag en reservekopieën"
+  - "AI-hulpmiddelen van een Amerikaans bedrijf, tekst- en mailverwerking en opvolging administratie"
+  - "boekhoudkantoor"
+  - "boekhoud- en facturatieprogramma, ook Peppol-facturatie"
   - "bank, voor betalingen"
+  - "dienstverlener in de EU die de afschriften van de zakelijke rekening ophaalt"
   - "onderaannemers, enkel voor hun deel van het werk"
   - "KLIP (Vlaamse overheid), enkel de ligging van de werf, vóór grondwerken"
-  - "Baloise via makelaarskantoor Remue, verzekeraar, bij schade"
+  - "verzekeraar en verzekeringsmakelaar, bij schade"
   - "advocaat of gerechtsdeurwaarder, enkel bij geschil of invordering"
-  - "hulpmiddelen voor tekst- en mailverwerking van het team, waaronder AI-diensten van Anthropic (VS)"
   - "overheden, als de wet dat vraagt"
-buiten_europa: ["Microsoft", "Meta", "GitHub", "Anthropic", "Google (enkel als statistieken aan staan)"]
+buiten_europa: ["webhost", "leverancier e-mail en cloudopslag", "leverancier AI-hulpmiddelen", "Meta (enkel als de klant WhatsApp of Instagram gebruikt)", "Google (enkel als statistieken aan staan)"]
 waarborgen:
+  algemeen: "EU-VS Data Privacy Framework (aangesloten dienstverleners) of standaardcontractbepalingen; per dienstverlener op vraag"
+  te_controleren: "per dienstverlener nakijken welke waarborg geldt (zie vaultnotitie)"
   google: "EU-VS Data Privacy Framework en standaardcontractbepalingen"
-  andere: "op te vragen bij BS4Gardens"
+  meta: "privacybeleid van Meta, enkel bij eigen gebruik door de klant"
+  kopie: "op te vragen bij BS4Gardens"
 fotos:
   kanalen: ["website", "Instagram en andere sociale media", "offertes voor andere klanten", "folders"]
-  particulier_en_woning: "opt-in, apart vakje, niet vooraf aangekruist"
-  professioneel_geen_woning: "gebruik tenzij de klant weigert"
-  anoniem: "geen personen, naam, straat, huisnummer, gemeente, nummerplaten of herkenbare gevel"
-  gemeente_voornaam: "enkel met apart vakje"
-  fotos_van_klant: "nooit voor promotie zonder toestemming"
+  werffotos: "opvolging, documentatie en bewijs (art. 16.1); grond overeenkomst en gerechtvaardigd belang"
+  fotos_van_klant: "enkel voor de offerte en de opdracht (art. 16.1)"
+  particulier_en_woning: "opt-in, apart vakje, niet vooraf aangekruist (art. 16.2)"
+  professioneel_geen_woning: "gebruik tenzij de klant weigert; grond gerechtvaardigd belang (art. 16.3)"
+  anoniem: "geen personen, naam, straat, huisnummer, gemeente, nummerplaten, herkenbare gevel of ander herkenbaar kenmerk; anders wegsnijden of niet gebruiken"
+  gemeente_voornaam: "enkel met aparte toestemming"
+  intrekken: "even eenvoudig als gegeven (art. 16.4)"

@@ -6,7 +6,7 @@ permalink: /cookies/
 juridisch: nagelezen-burchard-20261111
 ---
 {% comment %}
-INTERN, niet zichtbaar op de site: tekst van Burchard (2026-11-11), versie 2, zelfde feiten als _data/privacy.yml, privacy.md en de
+INTERN, niet zichtbaar op de site: tekst van Burchard (2026-11-11), versie 3 (volgt het versienummer van de privacyverklaring, 2026-11-13), zelfde feiten als _data/privacy.yml, privacy.md en de
 cookiebanner. De duur (182 dagen keuze, 395 dagen _ga) en de gemeten gebeurtenissen moeten gelijk blijven aan assets/cookies.js.
 {% endcomment %}
 {%- assign ga = site.ga4_id | default: "" -%}
@@ -14,7 +14,7 @@ cookiebanner. De duur (182 dagen keuze, 395 dagen _ga) en de gemeten gebeurtenis
 
 # Cookies op de website van BS4Gardens
 
-Versie 2 (11 november 2026)
+Versie 3 (13 november 2026)
 
 Deze website is van {{ site.data.contact.bedrijf }}, ondernemingsnummer {{ site.data.contact.ondernemingsnummer }}. Lees ook onze [privacyverklaring]({{ '/privacy/' | relative_url }}).
 
